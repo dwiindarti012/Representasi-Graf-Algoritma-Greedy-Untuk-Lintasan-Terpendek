@@ -29,8 +29,10 @@ print(M1[0][1])
 
 #membuat nol matriks
 Z = np.zeros((3,3))
-print("matriks nol:",Z)
+print("matriks nol:")
+print(z)
 
 #membuat matriks identitas
 I = np.eye(3)
-print("matriks identitas:",I)
+print("matriks identitas:")
+print(I)
