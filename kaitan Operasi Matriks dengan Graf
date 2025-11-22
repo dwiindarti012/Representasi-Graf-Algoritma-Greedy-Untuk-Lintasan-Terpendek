@@ -6,36 +6,6 @@ A = np.array([
     [4,0,0,1],
     [0,3,1,0]
     ])
-# print(A)
-# #membuat matriks baru
-# import numpy as np
-# M1 = np.array([[1,2],[3,4]])
-# M2 = np.array([[5,6],[7,8]])
-# #penjumlahan matriks
-# M_tambah = M1 + M2
-# print("Penjumlahan matriks:")
-# print(M_tambah)
-# #pengurangan matriks
-# M_kurang = M1 - M2
-# print("Pengurangan matriks:")
-# print(M_kurang)
-# #perkalian matriks
-# M_kali = np.dot(M1,M2)
-# print("Perkalian matriks:")
-# print(M_kali)
-# #transpose matriks
-# M_transpose = M1.T
-# print("matriks transpose:")
-# print(M_transpose)
-# #mengakses elemen matriks
-# print("elemen matriks:")
-# print(M1[0][1])
-# #membuat nol matriks
-# Z = np.zeros((3,3))
-# print("matriks nol:",Z)
-# #membuat matriks identitas
-# I = np.eye(3)
-# print("matriks identitas:",I)
 
 degree = np.sum(A > 0,axis=1)
 print(degree)
