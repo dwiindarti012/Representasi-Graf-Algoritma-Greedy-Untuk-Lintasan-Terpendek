@@ -17,7 +17,7 @@ visited = [current]
 path = [start]
 total = 0
 
-while len(visited) != (goal_index):
+while visited[-1] != (goal_index):
     curr = visited[-1]
     min_weight = float('inf')
     next_node = None
