@@ -1,0 +1,31 @@
+import numpy as np
+# ===== ADJACENCY MATRIX (NumPy) =====
+A = np.array([
+    [0, 8, 0, 4, 0],   # Sembalun
+    [8, 0, 5, 0, 7],   # Senaru
+    [0, 5, 0, 0, 0],   # Bayan
+    [4, 0, 0, 0, 3],   # Sesaot
+    [0, 7, 0, 3, 0]    # Suranadi
+])
+
+nodes = ['Sembalun', 'Senaru', 'Bayan', 'Sesaot', 'Suranadi']
+visited = [0] #mulai dari Sembalun (indeks 0)
+path = ['Sembalun']
+total = 0
+
+while len(visited) < len(nodes):
+    curr = visited[-1]
+    min_weight = float('inf')
+    next_node = None
+
+    for j in range(len(nodes)):
+        if A[curr][j] != 0 and j not in visited and A[curr][j] < min_weight:
+            min_weight = A[curr][j]
+            next_node = j
+    if next_node is None:
+        break
+    visited.append(next_node)
+    path.append(nodes[next_node])
+    total += min_weight
+print("Lintasan:","->".join(path))
+print("jarak total:", total)
